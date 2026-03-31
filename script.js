@@ -20,14 +20,15 @@ function sendData(event) {
     window.location.href = "join.html";
 }
 
-function selectGoal(goal) {
+// Add 'event' as a parameter here
+function selectGoal(goal, event) {
     document.getElementById("purpose").value = goal;
 
-    // highlight selected
     document.querySelectorAll(".goals button").forEach(btn => {
         btn.style.background = "#222";
     });
 
+    // Now 'event' will work correctly
     event.target.style.background = "#ff5733";
 }
 
@@ -54,10 +55,17 @@ function calculateTotal() {
     const months = Number(document.getElementById("months").value) || 0;
     const total = selectedPrice * months;
 
-    document.getElementById("total").innerText = "Total: ₹" + total;
+    const display = document.getElementById("total");
+    if (selectedPrice === 0) {
+        display.innerText = "Please select a plan above";
+    } else {
+        display.innerText = "Total: ₹" + total;
+    }
 }
 
 document.getElementById("months")?.addEventListener("input", calculateTotal);
+
+
 function submitFinal() {
 
     const months = Number(document.getElementById("months").value);
@@ -73,37 +81,33 @@ function submitFinal() {
 
     alert("Successfully Joined! 🎉");
 
-    const phone = "91XXXXXXXXXX"; // replace with real number
+    const phone = "9912432683"; // replace with real number
 
-    const message = `Hi, I want to join PowerFit Gym.
-Name: ${userData?.name}
-Plan: ₹${selectedPrice}
-Months: ${months}
-Total: ₹${totalAmount}`;
+    const message = `Hi, I want to join PowerFit Gym.%0A` +
+                `*Name:* ${userData?.name}%0A` +
+                `*Plan:* ₹${selectedPrice}%0A` +
+                `*Months:* ${months}%0A` +
+                `*Total:* ₹${totalAmount}`;
 
-    window.location.href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+// Use the variable in the URL
+window.location.href = `https://wa.me/${phone}?text=${message}`;
 
     localStorage.clear();
 }
 
 window.onload = function () {
-
-    const monthsInput = document.getElementById("months");
-    if (monthsInput) {
-        monthsInput.addEventListener("input", calculateTotal);
-    }
-
     const savedPlan = localStorage.getItem("selectedPlan");
-
+    
     if (savedPlan) {
+        // Set the global variable
         selectedPrice = Number(savedPlan);
 
+        // Find the card that matches the price and add the 'active' class
         document.querySelectorAll(".plan").forEach(p => {
-            if (p.getAttribute("data-price") == savedPlan) {
+            if (p.getAttribute("data-price") === savedPlan) {
                 p.classList.add("active");
             }
         });
     }
-
     calculateTotal();
 };
