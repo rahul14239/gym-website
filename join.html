@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Join PowerFit Gym</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2>PowerFit</h2>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+    </ul>
+</nav>
+
+<section class="join-page">
+    <h1>Join PowerFit Gym</h1>
+    <p>Start your fitness journey today 💪</p>
+
+    <form onsubmit="sendData(event)">
+        <input type="text" name="name" placeholder="Your Name" required>
+	<select name="purpose" required>
+    <option value="">Select Your Goal</option>
+    <option value="weight_loss">Weight Loss</option>
+    <option value="muscle_gain">Muscle Gain</option>
+    <option value="general_fitness">General Fitness</option>
+    <option value="bodybuilding">Bodybuilding</option>
+</select>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <button type="submit">Join Now</button>
+    </form>
+</section>
+
+<a href="https://wa.me/91XXXXXXXXXX?text=Hi, I am interested in joining your gym" 
+   target="_blank" 
+   class="whatsapp-btn">
+   💬
+</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>

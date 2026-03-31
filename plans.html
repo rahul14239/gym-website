@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Plan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Select Your Plan</h1>
+
+<div class="plans">
+
+    <div class="plan" data-price="999" onclick="selectPlan(this)">
+    Basic - ₹999/month
+</div>
+
+<div class="plan" data-price="1999" onclick="selectPlan(this)">
+    Pro - ₹1999/month
+</div>
+
+<div class="plan" data-price="2999" onclick="selectPlan(this)">
+    Elite - ₹2999/month
+</div>
+
+</div>
+
+<h3>Select Months</h3>
+<input type="number" id="months" placeholder="Enter months">
+
+<h2 id="total">Total: ₹0</h2>
+
+<button onclick="submitFinal()">Confirm & Join</button>
+
+<a href="https://wa.me/91 9912432683?text=Hi, I am interested in joining your gym" 
+   target="_blank" 
+   class="whatsapp-btn">
+   💬
+</a>
+<script src="script.js"></script>
+
+</body>
+</html>

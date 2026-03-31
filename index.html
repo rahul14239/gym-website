@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PowerFit Gym</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2>PowerFit</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Programs</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#contact">Join</a></li>
+    </ul>
+</nav>
+
+<section class="hero" id="home">
+    <div class="overlay">
+        <h1>Transform Your Body 💪</h1>
+<p>Join the best gym near you today</p>
+<button onclick="location.href='join.html'">Start Your Journey</button>
+    </div>
+</section>
+
+<section id="facilities">
+    <h2>Our Facilities</h2>
+    <div class="gym-container">
+
+        <div class="gym-card">
+            <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1">
+            <h3>Modern Equipment</h3>
+            <p>Latest machines for effective workouts</p>
+        </div>
+
+        <div class="gym-card">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b">
+            <h3>Expert Trainers</h3>
+            <p>Certified professionals to guide you</p>
+        </div>
+
+        <div class="gym-card">
+            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd">
+            <h3>Clean Environment</h3>
+            <p>Hygienic and safe workout space</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="gallery">
+    <h2>Gym Motivation</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e">
+        <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1">
+        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b">
+        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd">
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48">
+    </div>
+</section>
+
+<section id="services">
+    <h2>Our Programs</h2>
+    <div class="goals">
+    <button onclick="selectGoal('Weight Loss')">🔥 Weight Loss</button>
+    <button onclick="selectGoal('Muscle Gain')">💪 Muscle Gain</button>
+    <button onclick="selectGoal('Fitness')">🏃 Fitness</button>
+    <button onclick="selectGoal('Bodybuilding')">🏋️ Bodybuilding</button>
+</div>
+
+<input type="hidden" name="purpose" id="purpose">
+</section>
+
+<section id="plans">
+    <h2>Membership Plans</h2>
+    <div class="cards">
+        <div class="card">Basic - ₹999</div>
+        <div class="card highlight">Pro - ₹1999</div>
+        <div class="card">Elite - ₹2999</div>
+    </div>
+</section>
+
+<section id="location">
+    <h2>Find Us</h2>
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps?q=Hyderabad&output=embed"
+            width="100%" 
+            height="300" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+<section id="testimonials">
+    <h2>What Our Members Say</h2>
+
+    <div class="cards">
+        <div class="card">
+            <p>“Best gym in the area! Trainers are amazing.”</p>
+            <h4>- Rahul</h4>
+        </div>
+
+        <div class="card">
+            <p>“Lost 10kg in 3 months. Highly recommended!”</p>
+            <h4>- Priya</h4>
+        </div>
+
+        <div class="card">
+            <p>“Clean environment and great equipment.”</p>
+            <h4>- Arjun</h4>
+        </div>
+    </div>
+</section>
+
+<a href="https://wa.me/91XXXXXXXXXX?text=Hi, I am interested in joining your gym" 
+   target="_blank" 
+   class="whatsapp-btn">
+   💬
+</a>
+<script src="script.js"></script>
+</body>
+</html>
