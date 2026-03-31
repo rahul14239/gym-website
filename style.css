@@ -308,3 +308,47 @@ button {
     border-radius: 10px;
     overflow: hidden;
 }
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Stack sections vertically */
+    .gym-container,
+    .plans,
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Cards full width */
+    .gym-card,
+    .plan,
+    .card {
+        width: 90%;
+    }
+
+    /* Images resize */
+    .gallery img {
+        width: 200px;
+        height: 140px;
+    }
+
+    /* Input fields */
+    input, textarea {
+        width: 90%;
+    }
+
+    /* Button full width */
+    button {
+        width: 90%;
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
