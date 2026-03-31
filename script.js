@@ -81,7 +81,7 @@ function submitFinal() {
 
     alert("Successfully Joined! 🎉");
 
-    const phone = "9912432683"; // replace with real number
+    const phone = "919912432683"; // replace with real number
 
     const message = `Hi, I want to join PowerFit Gym.%0A` +
                 `*Name:* ${userData?.name}%0A` +
